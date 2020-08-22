@@ -51,6 +51,17 @@ function Count() {
       <h1>Count:{count}</h1>
       <button onClick={inCount}>increased</button>
       <button onClick={() => setCount(count - 1)}>decreased</button>
+      <Another countBro={count}></Another>
+      <Another countBro={count}></Another>
+      <Another countBro={count}></Another>
+    </div>
+  );
+}
+//
+function Another(props) {
+  return (
+    <div>
+      <h3>count bro is:{props.countBro}</h3>
     </div>
   );
 }
