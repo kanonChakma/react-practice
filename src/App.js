@@ -30,7 +30,10 @@ function Showdata() {
     <div>
       <h2>user length is:{users.length}</h2>
       {users.map((value) => (
-        <li>{value.name}</li>
+        <li>
+          name is:{value.name}
+          Id is:{value.id}
+        </li>
       ))}
     </div>
   );
