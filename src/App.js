@@ -21,7 +21,7 @@ export default function App() {
 }
 function Showdata() {
   const [users, setUsers] = useState([]);
-  useEffect(()=>{
+  useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
@@ -29,9 +29,9 @@ function Showdata() {
   return (
     <div>
       <h2>user length is:{users.length}</h2>
-      {
-       users.map(value=><li>{value.name}</li>)
-      }
+      {users.map((value) => (
+        <li>{value.name}</li>
+      ))}
     </div>
   );
 }
