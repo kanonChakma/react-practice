@@ -3,10 +3,10 @@ import "./styles.css";
 
 export default function App() {
   const tempInfo = [
-    { place: "dhaka", temp: 34 },
-    { place: "chittagong", temp: 399 },
-    { place: "sylhet", temp: 37 },
-    { place: "cumilla", temp: 35 }
+    { place: "dhaka", temp: 34, id: 1 },
+    { place: "chittagong", temp: 399, id: 2 },
+    { place: "sylhet", temp: 37, id: 3 },
+    { place: "cumilla", temp: 35, id: 4 }
   ];
   return (
     <div className="App">
@@ -14,7 +14,7 @@ export default function App() {
       <Count></Count>
 
       {tempInfo.map((temp) => (
-        <Temparature info={temp}></Temparature>
+        <Temparature info={temp} key={temp.id}></Temparature>
       ))}
     </div>
   );
@@ -30,10 +30,7 @@ function Showdata() {
     <div>
       <h2>user length is:{users.length}</h2>
       {users.map((value) => (
-        <li>
-          name is:{value.name}
-          Id is:{value.id}
-        </li>
+        <li>name is:{value.name}</li>
       ))}
     </div>
   );
